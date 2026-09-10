@@ -1,0 +1,931 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sadhana General Store</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:#f5f8f4;
+    color:#26352f;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#087f5b,#16a36b);
+    color:white;
+    text-align:center;
+    padding:40px 15px;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:19px;
+}
+
+/* MAIN */
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:25px 18px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:20px;
+    box-shadow:0 8px 28px rgba(0,0,0,0.08);
+}
+
+/* HERO */
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    align-items:center;
+}
+
+.hero h2{
+    font-size:32px;
+    color:#087f5b;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.hero-img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    background:#087f5b;
+    color:white;
+    text-decoration:none;
+    padding:14px 22px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#065c43;
+}
+
+/* INFORMATION */
+.info{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:20px;
+}
+
+.info-box{
+    background:#eef8f4;
+    padding:20px;
+    border-radius:14px;
+}
+
+.info-box b{
+    display:block;
+    color:#087f5b;
+    margin-bottom:8px;
+}
+
+.address{
+    margin-top:20px;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* PRODUCTS */
+.section-title{
+    color:#087f5b;
+    font-size:28px;
+}
+
+.product-intro{
+    margin-top:10px;
+    line-height:1.6;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:22px;
+}
+
+.product{
+    background:white;
+    border:1px solid #e3eae6;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.2s;
+}
+
+.product:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.10);
+}
+
+.product img{
+    width:100%;
+    height:175px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-content{
+    padding:14px;
+}
+
+.product h3{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.product p{
+    color:#68756f;
+    font-size:14px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+    background:#173b32;
+    color:white;
+    text-align:center;
+    padding:25px;
+    line-height:1.9;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .products{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:650px){
+    header h1{
+        font-size:30px;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-img{
+        height:250px;
+    }
+}
+
+@media(max-width:420px){
+    .products{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <h1>🛒 Sadhana General Store</h1>
+    <p>घर के उपयोग में होने वाला हर सामान एक ही जगह</p>
+</header>
+
+
+<main class="container">
+
+<!-- ================= HERO ================= -->
+
+<section class="card hero">
+
+    <div>
+
+        <h2>आपका अपना Sadhana General Store</h2>
+
+        <p>
+            हमारे दुकान पर घर के उपयोग में होने वाला हर सामान
+            मिलता है। रोज़मर्रा की जरूरतों के लिए
+            Sadhana General Store पर आपका स्वागत है।
+        </p>
+
+        <a class="btn" href="tel:9235670977">
+            📞 अभी कॉल करें
+        </a>
+
+    </div>
+
+    <!-- दुकान की फोटो -->
+    <img
+        class="hero-img"
+        src="https://loremflickr.com/1000/700/grocery-store,shop?lock=101"
+        alt="Sadhana General Store"
+    >
+
+</section>
+
+
+<!-- ================= SHOP INFORMATION ================= -->
+
+<section class="card">
+
+    <h2 class="section-title">
+        🏪 दुकान की जानकारी
+    </h2>
+
+    <div class="info">
+
+        <div class="info-box">
+            <b>दुकान का नाम</b>
+            Sadhana General Store
+        </div>
+
+        <div class="info-box">
+            <b>मालिक</b>
+            Durgesh Kumar Maurya
+        </div>
+
+        <div class="info-box">
+            <b>फोन नंबर</b>
+            <a href="tel:9235670977">
+                9235670977
+            </a>
+        </div>
+
+    </div>
+
+    <p class="address">
+        <b>📍 पता:</b>
+        Semariya Chhati, Lalganj, Beriya, Ballia, U.P.
+    </p>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="card">
+
+    <h2 class="section-title">
+        🛍️ हमारे यहाँ उपलब्ध सामान
+    </h2>
+
+    <p class="product-intro">
+        हमारे यहाँ घर और रोज़मर्रा के उपयोग में आने वाले
+        विभिन्न प्रकार के सामान उपलब्ध हैं।
+    </p>
+
+
+    <div class="products">
+
+        <!-- 1 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/rice,grocery?lock=1" alt="चावल">
+            <div class="product-content">
+                <h3>🍚 चावल</h3>
+                <p>Rice</p>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/flour,grocery?lock=2" alt="आटा">
+            <div class="product-content">
+                <h3>🌾 आटा</h3>
+                <p>Flour</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/pulses,grocery?lock=3" alt="दाल">
+            <div class="product-content">
+                <h3>🫘 दाल</h3>
+                <p>Pulses</p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/sugar,grocery?lock=4" alt="चीनी">
+            <div class="product-content">
+                <h3>🍬 चीनी</h3>
+                <p>Sugar</p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/salt,grocery?lock=5" alt="नमक">
+            <div class="product-content">
+                <h3>🧂 नमक</h3>
+                <p>Salt</p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/cooking-oil,grocery?lock=6" alt="तेल">
+            <div class="product-content">
+                <h3>🫗 खाने का तेल</h3>
+                <p>Cooking Oil</p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/spices,grocery?lock=7" alt="मसाले">
+            <div class="product-content">
+                <h3>🌶️ मसाले</h3>
+                <p>Spices</p>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/tea,grocery?lock=8" alt="चाय">
+            <div class="product-content">
+                <h3>☕ चाय</h3>
+                <p>Tea</p>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/coffee,grocery?lock=9" alt="कॉफी">
+            <div class="product-content">
+                <h3>☕ कॉफी</h3>
+                <p>Coffee</p>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/milk,grocery?lock=10" alt="दूध">
+            <div class="product-content">
+                <h3>🥛 दूध</h3>
+                <p>Milk</p>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/biscuits,grocery?lock=11" alt="बिस्कुट">
+            <div class="product-content">
+                <h3>🍪 बिस्कुट</h3>
+                <p>Biscuits</p>
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/bread,grocery?lock=12" alt="ब्रेड">
+            <div class="product-content">
+                <h3>🍞 ब्रेड</h3>
+                <p>Bread</p>
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/noodles,grocery?lock=13" alt="नूडल्स">
+            <div class="product-content">
+                <h3>🍜 नूडल्स</h3>
+                <p>Noodles</p>
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/snacks,grocery?lock=14" alt="नमकीन">
+            <div class="product-content">
+                <h3>🥣 नमकीन</h3>
+                <p>Snacks</p>
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/chocolate,grocery?lock=15" alt="चॉकलेट">
+            <div class="product-content">
+                <h3>🍫 चॉकलेट</h3>
+                <p>Chocolate</p>
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/beverages,grocery?lock=16" alt="पेय">
+            <div class="product-content">
+                <h3>🥤 पेय पदार्थ</h3>
+                <p>Beverages</p>
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/juice,grocery?lock=17" alt="जूस">
+            <div class="product-content">
+                <h3>🧃 जूस</h3>
+                <p>Juice</p>
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/soap,grocery?lock=18" alt="साबुन">
+            <div class="product-content">
+                <h3>🧼 साबुन</h3>
+                <p>Soap</p>
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/shampoo,grocery?lock=19" alt="शैम्पू">
+            <div class="product-content">
+                <h3>🧴 शैम्पू</h3>
+                <p>Shampoo</p>
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/toothpaste,grocery?lock=20" alt="टूथपेस्ट">
+            <div class="product-content">
+                <h3>🪥 टूथपेस्ट</h3>
+                <p>Toothpaste</p>
+            </div>
+        </div>
+
+        <!-- 21 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/toothbrush,grocery?lock=21" alt="टूथब्रश">
+            <div class="product-content">
+                <h3>🪥 टूथब्रश</h3>
+                <p>Toothbrush</p>
+            </div>
+        </div>
+
+        <!-- 22 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/hair-oil,grocery?lock=22" alt="हेयर ऑयल">
+            <div class="product-content">
+                <h3>🧴 हेयर ऑयल</h3>
+                <p>Hair Oil</p>
+            </div>
+        </div>
+
+        <!-- 23 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/detergent,grocery?lock=23" alt="डिटर्जेंट">
+            <div class="product-content">
+                <h3>🧽 डिटर्जेंट</h3>
+                <p>Detergent</p>
+            </div>
+        </div>
+
+        <!-- 24 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/broom,household?lock=24" alt="झाड़ू">
+            <div class="product-content">
+                <h3>🧹 झाड़ू</h3>
+                <p>Broom</p>
+            </div>
+        </div>
+
+        <!-- 25 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/bucket,household?lock=25" alt="बाल्टी">
+            <div class="product-content">
+                <h3>🪣 बाल्टी</h3>
+                <p>Bucket</p>
+            </div>
+        </div>
+
+        <!-- 26 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/basket,household?lock=26" alt="टोकरी">
+            <div class="product-content">
+                <h3>🧺 टोकरी</h3>
+                <p>Basket</p>
+            </div>
+        </div>
+
+        <!-- 27 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/tissue,household?lock=27" alt="टिश्यू">
+            <div class="product-content">
+                <h3>🧻 टिश्यू</h3>
+                <p>Tissue</p>
+            </div>
+        </div>
+
+        <!-- 28 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/handwash,household?lock=28" alt="हैंडवॉश">
+            <div class="product-content">
+                <h3>🧴 हैंडवॉश</h3>
+                <p>Hand Wash</p>
+            </div>
+        </div>
+
+        <!-- 29 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/dishwash,household?lock=29" alt="डिशवॉश">
+            <div class="product-content">
+                <h3>🧴 डिशवॉश</h3>
+                <p>Dishwash</p>
+            </div>
+        </div>
+
+        <!-- 30 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/floor-cleaner,household?lock=30" alt="फिनाइल">
+            <div class="product-content">
+                <h3>🧹 फिनाइल</h3>
+                <p>Floor Cleaner</p>
+            </div>
+        </div>
+
+        <!-- 31 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/candles,household?lock=31" alt="मोमबत्ती">
+            <div class="product-content">
+                <h3>🕯️ मोमबत्ती</h3>
+                <p>Candles</p>
+            </div>
+        </div>
+
+        <!-- 32 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/matchbox,household?lock=32" alt="माचिस">
+            <div class="product-content">
+                <h3>🔥 माचिस</h3>
+                <p>Matchbox</p>
+            </div>
+        </div>
+
+        <!-- 33 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/light-bulb,household?lock=33" alt="बल्ब">
+            <div class="product-content">
+                <h3>💡 बल्ब</h3>
+                <p>Light Bulb</p>
+            </div>
+        </div>
+
+        <!-- 34 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/battery,household?lock=34" alt="बैटरी">
+            <div class="product-content">
+                <h3>🔋 बैटरी</h3>
+                <p>Battery</p>
+            </div>
+        </div>
+
+        <!-- 35 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/pen,stationery?lock=35" alt="पेन">
+            <div class="product-content">
+                <h3>✏️ पेन</h3>
+                <p>Pen</p>
+            </div>
+        </div>
+
+        <!-- 36 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/notebook,stationery?lock=36" alt="कॉपी">
+            <div class="product-content">
+                <h3>📓 कॉपी</h3>
+                <p>Notebook</p>
+            </div>
+        </div>
+
+        <!-- 37 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/stationery,school?lock=37" alt="स्टेशनरी">
+            <div class="product-content">
+                <h3>📚 स्टेशनरी</h3>
+                <p>Stationery</p>
+            </div>
+        </div>
+
+        <!-- 38 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/shopping-bag,household?lock=38" alt="पॉलीबैग">
+            <div class="product-content">
+                <h3>🛍️ पॉलीबैग</h3>
+                <p>Shopping Bags</p>
+            </div>
+        </div>
+
+        <!-- 39 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/laundry-soap,household?lock=39" alt="कपड़े धोने का साबुन">
+            <div class="product-content">
+                <h3>👕 कपड़े धोने का साबुन</h3>
+                <p>Laundry Soap</p>
+            </div>
+        </div>
+
+        <!-- 40 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/body-lotion,cosmetics?lock=40" alt="बॉडी लोशन">
+            <div class="product-content">
+                <h3>🧴 बॉडी लोशन</h3>
+                <p>Body Lotion</p>
+            </div>
+        </div>
+
+        <!-- 41 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/cream,cosmetics?lock=41" alt="क्रीम">
+            <div class="product-content">
+                <h3>🧴 क्रीम</h3>
+                <p>Cream</p>
+            </div>
+        </div>
+
+        <!-- 42 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/incense,puja?lock=42" alt="अगरबत्ती">
+            <div class="product-content">
+                <h3>🌸 अगरबत्ती</h3>
+                <p>Incense</p>
+            </div>
+        </div>
+
+        <!-- 43 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/puja-items,india?lock=43" alt="पूजा सामान">
+            <div class="product-content">
+                <h3>🪔 पूजा सामान</h3>
+                <p>Puja Items</p>
+            </div>
+        </div>
+
+        <!-- 44 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/sanitizer,household?lock=44" alt="सैनिटाइज़र">
+            <div class="product-content">
+                <h3>🧴 सैनिटाइज़र</h3>
+                <p>Sanitizer</p>
+            </div>
+        </div>
+
+        <!-- 45 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/detergent-powder,household?lock=45" alt="डिटर्जेंट पाउडर">
+            <div class="product-content">
+                <h3>🧺 डिटर्जेंट पाउडर</h3>
+                <p>Detergent Powder</p>
+            </div>
+        </div>
+
+        <!-- 46 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/mop,household?lock=46" alt="पोछा">
+            <div class="product-content">
+                <h3>🧹 पोछा</h3>
+                <p>Mop</p>
+            </div>
+        </div>
+
+        <!-- 47 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/glass-cleaner,household?lock=47" alt="ग्लास क्लीनर">
+            <div class="product-content">
+                <h3>🪟 ग्लास क्लीनर</h3>
+                <p>Glass Cleaner</p>
+            </div>
+        </div>
+
+        <!-- 48 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/gloves,household?lock=48" alt="दस्ताने">
+            <div class="product-content">
+                <h3>🧤 घरेलू दस्ताने</h3>
+                <p>Household Gloves</p>
+            </div>
+        </div>
+
+        <!-- 49 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/plate,kitchen?lock=49" alt="प्लेट">
+            <div class="product-content">
+                <h3>🍽️ प्लेट</h3>
+                <p>Plate</p>
+            </div>
+        </div>
+
+        <!-- 50 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/cup,kitchen?lock=50" alt="कप">
+            <div class="product-content">
+                <h3>🥤 कप</h3>
+                <p>Cup</p>
+            </div>
+        </div>
+
+        <!-- 51 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/spoon,kitchen?lock=51" alt="चम्मच">
+            <div class="product-content">
+                <h3>🥄 चम्मच</h3>
+                <p>Spoon</p>
+            </div>
+        </div>
+
+        <!-- 52 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/kitchen-items,household?lock=52" alt="किचन सामान">
+            <div class="product-content">
+                <h3>🧂 किचन सामान</h3>
+                <p>Kitchen Items</p>
+            </div>
+        </div>
+
+        <!-- 53 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/sewing,household?lock=53" alt="सिलाई सामान">
+            <div class="product-content">
+                <h3>🧵 सिलाई सामान</h3>
+                <p>Sewing Items</p>
+            </div>
+        </div>
+
+        <!-- 54 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/razor,personal-care?lock=54" alt="रेज़र">
+            <div class="product-content">
+                <h3>🪒 रेज़र</h3>
+                <p>Razor</p>
+            </div>
+        </div>
+
+        <!-- 55 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/facewash,cosmetics?lock=55" alt="फेसवॉश">
+            <div class="product-content">
+                <h3>🧴 फेसवॉश</h3>
+                <p>Face Wash</p>
+            </div>
+        </div>
+
+        <!-- 56 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/petroleum-jelly,cosmetics?lock=56" alt="पेट्रोलियम जेली">
+            <div class="product-content">
+                <h3>🧴 पेट्रोलियम जेली</h3>
+                <p>Petroleum Jelly</p>
+            </div>
+        </div>
+
+        <!-- 57 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/mosquito-repellent,household?lock=57" alt="मच्छर भगाने का सामान">
+            <div class="product-content">
+                <h3>🦟 मच्छर भगाने का सामान</h3>
+                <p>Mosquito Repellent</p>
+            </div>
+        </div>
+
+        <!-- 58 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/paper,household?lock=58" alt="पेपर">
+            <div class="product-content">
+                <h3>🧻 घरेलू पेपर</h3>
+                <p>Household Paper</p>
+            </div>
+        </div>
+
+        <!-- 59 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/food,grocery?lock=59" alt="खाद्य सामग्री">
+            <div class="product-content">
+                <h3>🍱 खाद्य सामग्री</h3>
+                <p>Food Items</p>
+            </div>
+        </div>
+
+        <!-- 60 -->
+        <div class="product">
+            <img src="https://loremflickr.com/700/500/grocery,supermarket?lock=60" alt="जनरल स्टोर सामान">
+            <div class="product-content">
+                <h3>🛒 अन्य घरेलू सामान</h3>
+                <p>General Store Items</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="card contact">
+
+    <h2 class="section-title">
+        📞 हमसे संपर्क करें
+    </h2>
+
+    <p>
+        <strong>Sadhana General Store</strong>
+    </p>
+
+    <p>
+        मालिक: Durgesh Kumar Maurya
+    </p>
+
+    <p>
+        📍 Semariya Chhati, Lalganj, Beriya, Ballia, U.P.
+    </p>
+
+    <br>
+
+    <a class="btn" href="tel:9235670977">
+        📞 9235670977 पर कॉल करें
+    </a>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <strong>Sadhana General Store</strong>
+
+    <br>
+
+    मालिक: Durgesh Kumar Maurya
+
+    <br>
+
+    📍 Semariya Chhati, Lalganj, Beriya, Ballia, U.P.
+
+    <br>
+
+    📞 9235670977
+
+    <br>
+
+    © 2026 Sadhana General Store
+
+</footer>
+
+</body>
+</html>
+```
